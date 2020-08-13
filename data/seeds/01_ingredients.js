@@ -1,10 +1,6 @@
 
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
+      return knex('Ingredients').insert([
         {name: 'lbs of macaroni'},
         {name: 'tbs of butter'},
         {name: 'tbs of flour'},
@@ -16,5 +12,4 @@ exports.seed = function(knex) {
         {name: 'tomatoes'},
         {name: 'lbs of ground beef'}
       ]);
-    });
 };
